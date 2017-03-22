@@ -1,0 +1,7 @@
+before_build:
+- nuget restore UnicodeTest\UnicodeTest.sln
+
+build_script:
+- ps: msbuild "C:\projects\appveyor-test\UnicodeTest\UnicodeTest.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
+test: off
