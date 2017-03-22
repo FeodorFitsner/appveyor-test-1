@@ -2,7 +2,8 @@ before_build:
 - nuget restore UnicodeTest\UnicodeTest.sln
 
 build_script:
-- ps: chcp 65001
-- ps: msbuild UnicodeTest\UnicodeTest.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+#- ps: chcp 65001
+#- ps: msbuild UnicodeTest\UnicodeTest.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+- build.cmd
 
 test: off
